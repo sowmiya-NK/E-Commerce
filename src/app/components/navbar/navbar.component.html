@@ -9,13 +9,15 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/cart"
+          <a class="nav-link" routerLink="/cart"
             >cart {{ getCount() > 0 ? getCount() : "" }}</a
           >
         </li>
 
         <li>
-          <button class="nav-link" routerLink="/" (click)="logout()"> Logout </button>
+          <button class="nav-link" (click)="logout()">
+            Logout
+          </button>
         </li>
       </ul>
     </div>

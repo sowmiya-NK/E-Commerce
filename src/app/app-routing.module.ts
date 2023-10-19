@@ -6,16 +6,16 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PagenotfoundpageComponent } from './components/pagenotfoundpage/pagenotfoundpage.component';
-import { authGuard } from './services/auth-guard.service';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { authGuard } from './common/auth.guard';
 
 const routes: Routes = [
+  { path: '', component: WelcomeComponent },
   { path: 'product', component: ProductComponent },
-  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-
   { path: 'cart', component: CartComponent, canActivate: [authGuard] },
   { path: 'navbar', component: NavbarComponent },
-
   { path: '**', component: PagenotfoundpageComponent },
 ];
 

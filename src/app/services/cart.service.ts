@@ -16,8 +16,14 @@ export class CartService {
 
   //addtocart
   addToCart(id: number) {
+    console.log("called");
+    
     let cart: Product[] = JSON.parse(localStorage.getItem('carts') as string);
+    console.log(cart);
+    
     let products = JSON.parse(localStorage.getItem('products') as string);
+    console.log(cart);
+
     let findproduct: Product | undefined = products.find(
       (p: { id: number }) => p.id === id
     );
@@ -57,7 +63,7 @@ export class CartService {
 
   //getting cart details show in cart page
 
-  getCartDetails(): Product[] {
+    getCartDetails(): Product[] {
     return this.cart;
   }
 }

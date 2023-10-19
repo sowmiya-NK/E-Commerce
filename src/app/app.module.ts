@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { PagenotfoundpageComponent } from './components/pagenotfoundpage/pagenotfoundpage.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PagenotfoundpageComponent } from './components/pagenotfoundpage/pagenot
     LoginComponent,
     RegisterComponent,
     PagenotfoundpageComponent,
+    WelcomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

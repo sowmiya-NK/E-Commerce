@@ -1,14 +1,14 @@
-<body class="bg-light text-center">
-  <div class="container mt-4">
+<body class="bg-light text-center ">
+  <div class="container mt-4 border-dark">
     <div class="row mt-4">
-      <div class="card mt-4" class="col-3" *ngFor="let pro of products">
-        <div class="border rounded p-5 border-dark d-flex flex-column ">
+      <div class="card mt-4" class="col-3 bg-info" *ngFor="let pro of products">
+        <div class="border rounded p-5  d-flex flex-column ">
           <img src="{{ pro.image }}" class="card-img-top mx-3 " alt="..." height="150px" width="50px"
           />
           <div class="card-body">
             <h5 class="card-title">{{ pro.title.substring(0, 11) }}</h5>
-            <p class="card-text">{{ pro.price }}</p>
-            <a href="#" class="btn btn-primary" (click)="addToCart(pro.id)"
+            <p class="card-text text-danger fs-5 ">₹{{ pro.price }}</p>
+            <a  class="btn btn-primary" (click)="addToCart(pro.id)"
               >Add to cart</a
             >
           </div>

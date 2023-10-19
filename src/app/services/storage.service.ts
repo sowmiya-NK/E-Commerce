@@ -49,7 +49,7 @@ export class StorageService {
 
   //userset
   setLoggesInUser(user: User): void {
-    localStorage.setItem('LoggedInUser', JSON.stringify(user));
+    localStorage.setItem('LoggedInUser', JSON.stringify(this.users));
   }
 
   //remove user when logout is clicked
